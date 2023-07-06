@@ -66,7 +66,7 @@ public class UserRegistration {
         }
         else {
             System.out.println("Sorry!your Mobile number is not valid.");
-        }*/
+        }
 
 
     public void validPassword(){
@@ -84,6 +84,22 @@ public class UserRegistration {
             System.out.println("Sorry!your password is not valid.");
         }
 
+    }*/
+    public void validEmail()
+    {
+        Pattern pattern = Pattern.compile("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your mail:");
+        String mail=sc.nextLine();
+
+        Matcher matcher=pattern.matcher(mail);
+        if(matcher.matches())
+        {
+            System.out.println("Nice! your Email is valid.");
+        }
+        else {
+            System.out.println("Sorry! your Email is not valid.");
+        }
     }
 
     public static void main(String[] args)
@@ -91,9 +107,9 @@ public class UserRegistration {
         UserRegistration ur = new UserRegistration();
         //ur.validfirstname();
         //ur.validlastname();
-        //ur.validEmail();
         //ur.validMobileNumber();
-        ur.validPassword();
+        //ur.validPassword();
+        ur.validEmail();
 
 
 
