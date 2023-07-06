@@ -71,7 +71,7 @@ public class UserRegistration {
 
     public void validPassword(){
         //Should have one uppercase
-        Pattern pattern = Pattern.compile("^(?=.*[0-9])(?=.*[A-Z])[A-Za-z0-9]{8,}$");
+        Pattern pattern = Pattern.compile("(?=.*[!@#$%^&*()&/]).{8,}");
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your password:");
         String password=sc.nextLine();
