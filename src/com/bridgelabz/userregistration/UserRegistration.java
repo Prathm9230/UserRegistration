@@ -67,13 +67,14 @@ public class UserRegistration {
         else {
             System.out.println("Sorry!your Mobile number is not valid.");
         }*/
+
+
     public void validPassword(){
         //Should have one uppercase
-        Pattern pattern = Pattern.compile("^[A-Z]{1,}[a-z]{8,}$");
+        Pattern pattern = Pattern.compile("^(?=.*[0-9])(?=.*[A-Z])[A-Za-z0-9]{8,}$");
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your password:");
         String password=sc.nextLine();
-
         Matcher matcher=pattern.matcher(password);
         if(matcher.matches())
         {
